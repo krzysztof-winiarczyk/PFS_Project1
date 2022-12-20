@@ -53,8 +53,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v3
         with:
-          cache-from: type=registry,src=docker.io/kveeen/fibcalc:buildcache
-          cache-to: type=registry,dest=docker.io/kveeen/fibcalc:buildcache,mode=registry
+          cache-from: type=registry,ref=docker.io/kveeen/fibcalc:buildcache
+          cache-to: type=registry,ref=docker.io/kveeen/fibcalc:buildcache
           platforms: linux/arm64/v8,linux/amd64
           context: .
           file: ./Dockerfile
