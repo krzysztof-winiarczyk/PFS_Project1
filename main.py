@@ -25,6 +25,7 @@ def print_red(text):
     print("\033[31m{}\033[0m" .format(text))
 
 
+# calculate n-th term in Fibonacci sequence (iteratively)
 def fib(n: int) -> int:
     if n == 0:
         return 0
