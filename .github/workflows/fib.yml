@@ -1,5 +1,11 @@
 name: OCI build
 on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag in the from v0.0.0'
+        required: true
+        type: string
   push:
     tags:
       - 'v*'
@@ -28,8 +34,6 @@ jobs:
           images: |
             ghcr.io/krzysztof-winiarczyk/fibcalc
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
 
