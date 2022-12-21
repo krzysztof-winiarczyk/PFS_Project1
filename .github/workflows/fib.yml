@@ -3,6 +3,10 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tags:
+        - 'v*'
 
 jobs:
   build:
