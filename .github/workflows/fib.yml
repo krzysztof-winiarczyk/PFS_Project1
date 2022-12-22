@@ -1,11 +1,5 @@
 name: OCI build
 on:
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Tag in the from v0.0.0'
-        required: true
-        type: environment
   push:
     tags:
       - 'v*'
